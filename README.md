@@ -99,10 +99,9 @@ mood-tracker-ai/
 │   ├── utils/               # Utility functions
 │   └── App.tsx              # Main app entry point
 │
-├── backend/                 # Node.js server
-│   ├── routes/              # API routes
-│   ├── utils/               # Helper functions
-│   ├── index.js             # Server entry point
+├── backend/
+|   ├──src/             # Node.js server
+│      ├── index.js             # Server entry point
 │   └── .env                 # Environment variables
 │
 └── README.md                # Project documentation
