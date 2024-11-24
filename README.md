@@ -41,7 +41,7 @@ The **Mood Tracker with AI Insights** app allows users to track their daily mood
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:girma336/mood-tracker.git
+   git clone git@github.com:girma336/mood-tracker-ai.git
    ```
 2. Navigate to frontend directory
    ```bash
