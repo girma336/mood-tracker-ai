@@ -18,8 +18,15 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // GPT Endpoint
-app.post("/api/gpt", async (req, res) => {
-  const { prompt } = req.body;
+app.post("/api/mood-traker", async (req, res) => {
+  const { moodScale, description } = req.body;
+
+  const prompt = `
+The user rated their mood as ${moodScale}/5 and described it as follows: "${description}". 
+Based on this information, provide:
+1. Insights to help the user understand their current emotional state.
+2. Practical tips or actionable advice to improve their mood.
+    `;
 
   if (!prompt) {
     return res.status(400).json({ error: "Prompt is required" });
@@ -40,7 +47,9 @@ app.post("/api/gpt", async (req, res) => {
       }
     );
 
-    res.json(response.data);
+    // res.json(response.data);
+    const insight = response.data;
+    res.json({ insight });
   } catch (error) {
     console.error(
       "Error with OpenAI API:",
