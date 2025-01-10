@@ -1,4 +1,4 @@
-# Mood Tracker with AI Insights
+# Mood Tracker with AI Insights Dev Friends
 
 ## Overview
 
